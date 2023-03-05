@@ -1,0 +1,13 @@
+<div>
+  <label>Shift</label><br/>
+  <select name="selectValue" id="selectValue" (change)="onChange($event)">
+    <option *ngFor="let o of selectOptions">{{o}}</option>
+  </select>
+</div>
+
+<section>
+  <br/>
+  <plain [plainText]="plainText" (plainTextChanged)="onPlainTextChange($event)"></plain>
+  <br/>
+  <app-cipher [encryptedText]="encryptedText" (encryptTextChanged)="onEncrptTextChange($event)"></app-cipher>
+</section>
